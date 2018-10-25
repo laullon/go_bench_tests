@@ -3,7 +3,7 @@
 ## run
 Command:
 ```
-go test --bench=. -test.benchmem -cpuprofile profile_cpu.out .
+go test --bench=. -test.benchmem -cpuprofile profile_cpu.out -memprofile profile_mem.out .
 ```
 
 Result:
@@ -18,10 +18,16 @@ PASS
 ok  	laullon.com/bench_tests	6.425s
 ```
 
-## Generate profile_cpu.pdf
+## Generate pdf's
 
 ```
 go tool pprof -pdf profile_cpu.out > profile_cpu.pdf
 ```
 
 [profile_cpu.pdf](https://github.com/laullon/go_bench_tests/blob/master/profile_cpu.pdf)
+
+```
+go tool pprof -pdf profile_mem.out > profile_mem.pdf
+```
+
+[profile_mem.pdf](https://github.com/laullon/go_bench_tests/blob/master/profile_mem.pdf)
