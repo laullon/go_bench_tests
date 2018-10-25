@@ -18,7 +18,7 @@ PASS
 ok  	laullon.com/bench_tests	6.425s
 ```
 
-## Generate `profile_cpu.pdf`
+## Generate profile_cpu.pdf
 
 ```
 go tool pprof -pdf profile_cpu.out > profile_cpu.pdf
